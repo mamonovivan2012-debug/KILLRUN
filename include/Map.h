@@ -1,15 +1,16 @@
 #pragma once
 
+#include <array>
+#include <utility>
+#include "Player.h"
+#include "Target.h"
+
 class Map {
 public:
-    Map();
-
-    void display(int playerPosition, int targetPosition, bool targetActive) const;
-
-    int getWidth() const;
-    int getHeight() const;
-
-private:
-    int width;
-    int height;
+    void display(
+        const Player& player,
+        const std::array<Target, 3>& targets,
+        const std::array<std::pair<int, int>, 2>& hazards,
+        const std::array<bool, 2>& hazardTriggered
+    ) const;
 };
