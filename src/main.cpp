@@ -1,14 +1,11 @@
-
-#include <iostream>
-#include <string>
+#include "Game.h"
 
 int main() {
-    std::cout << "================================\n";
-    std::cout << "          KILLRUN v0.1\n";
-    std::cout << "================================\n";
+    Game game;
 
-    std::cout << "Game engine initialized!\n";
-    std::cout << "Welcome to KILLRUN.\n";
+    game.initialize();
+    game.run();
+    game.shutdown();
 
     return 0;
 }
