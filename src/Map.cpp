@@ -5,12 +5,16 @@ Map::Map()
     : width(10), height(5) {
 }
 
-void Map::display() const {
+void Map::display(int playerPosition) const {
     std::cout << "\nMap:\n";
 
     for (int y = 0; y < height; ++y) {
         for (int x = 0; x < width; ++x) {
-            std::cout << ". ";
+            if (y == 0 && x == playerPosition) {
+                std::cout << "P ";
+            } else {
+                std::cout << ". ";
+            }
         }
 
         std::cout << "\n";
