@@ -21,7 +21,7 @@ void Game::run() {
     }
 
     std::cout << "\n";
-    map.display();
+    map.display(player.getPosition());
 
     std::cout << "\nControls:\n";
     std::cout << "A - move left\n";
