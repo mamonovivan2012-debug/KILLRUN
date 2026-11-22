@@ -45,6 +45,7 @@ void Game::run() {
             case 'd':
             case 'D':
                 player.move(1);
+                map.display(player.getPosition());
                 break;
 
             case 's':
