@@ -6,11 +6,19 @@ Player::Player()
 }
 
 void Player::move(int direction) {
-    position += direction;
+    int newPosition = position + direction;
 
-    if (position < 0) {
-        position = 0;
+    if (newPosition < 0) {
+        std::cout << "You reached the left edge!\n";
+        return;
     }
+
+    if (newPosition >= 10) {
+        std::cout << "You reached the right edge!\n";
+        return;
+    }
+
+    position = newPosition;
 
     std::cout << "Player moved to position: "
               << position << "\n";
