@@ -7,7 +7,7 @@ Game::Game()
 
 void Game::initialize() {
     std::cout << "============================\n";
-    std::cout << "       " << gameName << "\n";
+    std::cout << "          KILLRUN\n";
     std::cout << "============================\n";
     std::cout << "Game initialized!\n";
 
@@ -20,11 +20,47 @@ void Game::run() {
         return;
     }
 
-    std::cout << "Welcome to KILLRUN!\n";
-    std::cout << "Game loop started.\n";
+    std::cout << "\nControls:\n";
+    std::cout << "A - move left\n";
+    std::cout << "D - move right\n";
+    std::cout << "S - show player status\n";
+    std::cout << "Q - quit\n\n";
+
+    char command;
+
+    while (isRunning) {
+        std::cout << "> ";
+        std::cin >> command;
+
+        switch (command) {
+            case 'a':
+            case 'A':
+                player.move(-1);
+                break;
+
+            case 'd':
+            case 'D':
+                player.move(1);
+                break;
+
+            case 's':
+            case 'S':
+                player.showStatus();
+                break;
+
+            case 'q':
+            case 'Q':
+                isRunning = false;
+                break;
+
+            default:
+                std::cout << "Unknown command.\n";
+                break;
+        }
+    }
 }
 
 void Game::shutdown() {
     isRunning = false;
-    std::cout << "KILLRUN shutdown.\n";
+    std::cout << "\nKILLRUN shutdown.\n";
 }
