@@ -20,6 +20,9 @@ void Game::run() {
         return;
     }
 
+    std::cout << "\n";
+    map.display();
+
     std::cout << "\nControls:\n";
     std::cout << "A - move left\n";
     std::cout << "D - move right\n";
