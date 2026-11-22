@@ -4,7 +4,7 @@ class Map {
 public:
     Map();
 
-    void display(int playerPosition) const;
+    void display(int playerPosition, int targetPosition, bool targetActive) const;
 
     int getWidth() const;
     int getHeight() const;
