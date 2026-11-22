@@ -4,13 +4,17 @@ class Player {
 public:
     Player();
 
-    void move(int direction);
-    void showStatus() const;
+    void move(int dx, int dy);
+    void reset();
+    void takeDamage(int amount);
 
-    int getPosition() const;
+    int getX() const;
+    int getY() const;
     int getHealth() const;
+    bool isAlive() const;
 
 private:
-    int position;
+    int x;
+    int y;
     int health;
 };
