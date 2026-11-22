@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include "Player.h"
 
 class Game {
 public:
@@ -13,4 +14,5 @@ public:
 private:
     bool isRunning;
     std::string gameName;
+    Player player;
 };
