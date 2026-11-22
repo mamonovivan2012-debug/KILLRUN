@@ -1,12 +1,11 @@
 #include "Target.h"
 
-Target::Target()
-    : position(5), active(true) {
+Target::Target(int startX, int startY)
+    : x(startX), y(startY), active(true) {
 }
 
-int Target::getPosition() const {
-    return position;
-}
+int Target::getX() const { return x; }
+int Target::getY() const { return y; }
 
 bool Target::isActive() const {
     return active;
